@@ -10,6 +10,7 @@ class MegaGreeter
   def say_hi
     if @names.nil?
       puts "..."
+    # b/c if @names object responds to "each", we know that it can be iterated on (array here which can be)
     elsif @names.respond_to?("each")
       # @names is a list of some kind, iterate!
       @names.each do |name|
